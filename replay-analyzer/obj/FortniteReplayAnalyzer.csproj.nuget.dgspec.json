@@ -1,0 +1,340 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj",
+        "projectName": "FortniteReplayAnalyzer",
+        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj",
+        "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj"
+              },
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj"
+              },
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj"
+              },
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "OozSharp": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "SingleStoreConnector": {
+              "target": "Package",
+              "version": "[0.1.2-beta, )"
+            },
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.115.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
+        "projectName": "FortniteReplayReader",
+        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
+        "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj"
+              },
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+        "projectName": "OozSharp",
+        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+        "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
+        "projectName": "Unreal.Core",
+        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
+        "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
+        "projectName": "Unreal.Encryption",
+        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
+        "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

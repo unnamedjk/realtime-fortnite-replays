@@ -1,7 +1,0 @@
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\FortniteReplayAnalyzer.pdb
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\SQLite.Interop.dll
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\FortniteReplayReader.pdb
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\OozSharp.pdb
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\Unreal.Core.pdb
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\Unreal.Encryption.pdb
-C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\bin\Release\net5.0\publish\FortniteReplayAnalyzer

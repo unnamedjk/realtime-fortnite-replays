@@ -1,0 +1,10 @@
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/FortniteReplayReader.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/FortniteReplayReader.deps.json
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/FortniteReplayReader.pdb
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Microsoft.Extensions.Logging.Abstractions.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/OozSharp.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Core.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Encryption.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Core.pdb
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Encryption.pdb
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/OozSharp.pdb

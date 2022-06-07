@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "A/WZhZlOq3OipsKFttt7PzS2u4rZ0rQoUE7iaYTHDs2+cwOhzS8z/Pjgt5F9DHURZkDxTCbUTyASmkGdLqbaZg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jkuntz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

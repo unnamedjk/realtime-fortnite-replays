@@ -1,0 +1,4 @@
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Core.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Core.deps.json
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Unreal.Core.pdb
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/Microsoft.Extensions.Logging.Abstractions.dll

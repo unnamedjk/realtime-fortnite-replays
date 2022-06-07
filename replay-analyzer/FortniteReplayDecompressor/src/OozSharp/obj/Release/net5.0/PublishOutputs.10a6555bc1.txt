@@ -1,0 +1,3 @@
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/OozSharp.dll
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/OozSharp.deps.json
+/mnt/c/Users/jkuntz/Development/realtime-fortnite-replays/replay-analyzer/srv/replay-analyzer/OozSharp.pdb

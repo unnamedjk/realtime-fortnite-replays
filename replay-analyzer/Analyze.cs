@@ -2,13 +2,12 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+
 using System.Diagnostics;
 using Unreal.Core.Models.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FortniteReplayAnalyzer.Extensions;
-
-
 
 namespace Analyzer
 {
@@ -25,22 +24,31 @@ namespace Analyzer
       var provider = serviceCollection.BuildServiceProvider();
       var logger = provider.GetService<ILogger<Analyze>>();
 
+      // Process Replay File
+      string replayFile;
+      string db_host;
+      string db_port;
+      string db_user;
+      string db_pass;
+      if (args.Length < 5) {
+        Console.WriteLine("Command format: FortniteAnalyzer <replay_file> <db_host> <db_port> <db_user> <db_pass>");
+        return;
+      } else {
+        replayFile = args[0];
+        db_host    = args[1];
+        db_port    = args[2];
+        db_user    = args[3];
+        db_pass    = args[4];
+      }
+
       // SingleStore Connection Details
-      var S2ConnectionString = Extensions.S2ConnectString("localhost", 3306, "root", "fndemo");
+      var S2ConnectionString = Extensions.S2ConnectString(db_host, uint.Parse(db_port), db_user, db_pass);
       var S2Conn = Extensions.S2Connect(S2ConnectionString);
       S2Conn.Open();
 
       // SingleStore Schema Setup
       Ddls.CreateDDLs(S2Conn);
-
-      // Process Replay File
-      string replayFile;
-      if (args.Length < 1) {
-        System.Console.WriteLine("Command format: ConsoleReader <replay file folder path>");
-        return;
-      } else { replayFile = args[0]; }
-
-      Console.WriteLine($"Analyzing Replay: {replayFile}");
+      Console.WriteLine($"\nAnalyzing Replay: {replayFile}");
       int firstDash = replayFile.IndexOf('-') + 1;
       int lastPeriod = replayFile.LastIndexOf('.');
       var timestamp = replayFile.Substring(firstDash, lastPeriod - firstDash);
@@ -49,6 +57,16 @@ namespace Analyzer
       sw.Start();
       var reader = new ReplayReader(logger, ParseMode.Full);
       var replay = reader.ReadReplay(replayFile);
+      var mapdata = replay.MapData;
+      var llamas = mapdata.Llamas;
+      var stats = replay.Stats;
+
+      Console.WriteLine($"{stats.Revives.GetType()}");
+
+      foreach (FortniteReplayReader.Models.SafeZone szone in mapdata.SafeZones)
+      {
+        Console.WriteLine($"radius: {szone.Radius} center: {szone.LastCenter} next_center: {szone.NextCenter} start_shrink: {szone.StartShrinkTime} n_rad: {szone.NextRadius} last_radius: {szone.LastRadius} ");
+      }
 
       // Analyze Replay
       string GameSessionId = replay.GameData.GameSessionId;

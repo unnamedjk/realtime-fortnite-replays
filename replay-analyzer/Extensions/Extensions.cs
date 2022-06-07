@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Numerics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using Unreal.Core;
+using Unreal.Core.Attributes;
+using Unreal.Core.Models;
+using System.IO.Compression;
 using System.Threading.Tasks;
 using SingleStoreConnector;
 namespace FortniteReplayAnalyzer.Extensions
@@ -47,6 +52,7 @@ namespace FortniteReplayAnalyzer.Extensions
       {
         var playerId = player.Id;
       }
+      
       // Player Details
       var isBot = player.IsBot;
       var playerCurWeapon = player.CurrentWeapon;
@@ -58,6 +64,7 @@ namespace FortniteReplayAnalyzer.Extensions
       var playerLevel = player.Level;
       var playerKills = player.Kills;
       var locations = player.Locations;
+      
       // Player Costmetics
       var contrail = player.Cosmetics.SkyDiveContrail;
       var pickaxe = player.Cosmetics.Pickaxe;
@@ -99,8 +106,10 @@ namespace FortniteReplayAnalyzer.Extensions
         $"'{deathLocation}'," +
         $"'{deathTime}'" +
         $");", S2Connection);
-      Console.WriteLine(playerInsert.CommandText);
+
+      // Console.WriteLine(playerInsert.CommandText);
       playerInsert.ExecuteNonQuery();
+
       // Collect Player Movement Data
       foreach (FortniteReplayReader.Models.PlayerMovement playerMove in locations)
       {
@@ -125,12 +134,9 @@ namespace FortniteReplayAnalyzer.Extensions
         var isHonking = playerMove.bIsHonking;
         var isDBNO = playerMove.bIsDBNO;
         var location = playerMove.ReplicatedMovement?.Location;
-        var locX = location.X;
-        var locY = location.Y;
-        // float x = (float)playerMove.ReplicatedMovement?.Location.X;
-        // float y = (float)playerMove.ReplicatedMovement?.Location.Y;
-        // float z = (float)playerMove.ReplicatedMovement?.Location.Z;
-        // var xyz = new String($"{x},{y},{z}");
+        float x = location.X;
+        float y = location.Y;
+        float z = location.Z;
         var playerMvInsert = new SingleStoreCommand($"INSERT INTO SessionPlayerMovement VALUES(" +
           $"'{player.EpicId}'," +
           $"'{GameSessionId}'," +
@@ -152,13 +158,12 @@ namespace FortniteReplayAnalyzer.Extensions
           $"'{isHonking}'," +
           $"'{isDBNO}'," +
           $"'{location}'" +
-          //$"{x}," +
-          //$"{y}," +
-          //$"{z}" +
+          $"{x}," +
+          $"{y}" +
           $");", S2Connection);
-        Console.WriteLine(playerMvInsert.CommandText);
-        playerMvInsert.ExecuteNonQuery();
-        // Thread.Sleep(333);
+        // Console.WriteLine(playerMvInsert.CommandText);
+        // playerMvInsert.ExecuteNonQuery();
+        Thread.Sleep(333);
       }
       S2Connection.Close();
     }

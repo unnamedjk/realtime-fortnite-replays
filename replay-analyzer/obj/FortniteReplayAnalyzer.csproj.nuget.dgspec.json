@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj": {}
+    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayAnalyzer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj": {
+    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayAnalyzer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj",
+        "projectUniqueName": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayAnalyzer.csproj",
         "projectName": "FortniteReplayAnalyzer",
-        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayAnalyzer.csproj",
+        "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayAnalyzer.csproj",
         "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\obj\\",
+        "outputPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,17 +28,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj"
               },
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj"
               },
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj"
               },
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj"
               }
             }
           }
@@ -76,6 +76,10 @@
             "System.Data.SQLite.Core": {
               "target": "Package",
               "version": "[1.0.115.5, )"
+            },
+            "Wasi.Sdk": {
+              "target": "Package",
+              "version": "[0.1.1, )"
             }
           },
           "imports": [
@@ -97,14 +101,14 @@
         }
       }
     },
-    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj": {
+    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
+        "projectUniqueName": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
         "projectName": "FortniteReplayReader",
-        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
+        "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
         "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\obj\\",
+        "outputPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -121,11 +125,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj"
               },
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj"
               }
             }
           }
@@ -164,14 +168,14 @@
         }
       }
     },
-    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+        "projectUniqueName": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
         "projectName": "OozSharp",
-        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+        "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
         "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\obj\\",
+        "outputPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -218,14 +222,14 @@
         }
       }
     },
-    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
+    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
+        "projectUniqueName": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
         "projectName": "Unreal.Core",
-        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
+        "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\Unreal.Core.csproj",
         "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\obj\\",
+        "outputPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -278,14 +282,14 @@
         }
       }
     },
-    "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
+    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
+        "projectUniqueName": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
         "projectName": "Unreal.Encryption",
-        "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
+        "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
         "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\obj\\",
+        "outputPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -302,8 +306,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
-                "projectPath": "C:\\Users\\jkuntz\\source\\repos\\ubeljk\\FortniteReplayAnalyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj"
+              "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+                "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj"
               }
             }
           }

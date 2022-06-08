@@ -107,8 +107,33 @@ namespace FortniteReplayAnalyzer.Extensions
         $"'{deathTime}'" +
         $");", S2Connection);
 
+      var cosStats = new SingleStoreCommand($"INSERT IGNORE INTO cosStats VALUES (" +
+        $"'{GameSessionId}'," +
+        $"'{player.EpicId}'," +
+        $"'{contrail}'," +
+        $"'{pickaxe}'," +
+        $"'{petskin}'," +
+        $"'{parts}'," +
+        $"'{musicpack}'," +
+        $"'{loadingscreen}'," +
+        $"'{itemwraps}'," +
+        $"'{isdefaultchar}'," +
+        $"'{herotype}'," +
+        $"'{glider}'," +
+        $"'{dances}'," +
+        $"'{gender}'," +
+        $"'{bodyType}'," +
+        $"'{bannerIcon}'," +
+        $"'{charecter}'," +
+        $"'{bannerColor}'," +
+        $"'{backpack}'" +
+        $");", S2Connection);
+
+      //Console.WriteLine(cosStats.CommandText);
+
       // Console.WriteLine(playerInsert.CommandText);
       playerInsert.ExecuteNonQuery();
+      cosStats.ExecuteNonQuery();
 
       // Collect Player Movement Data
       foreach (FortniteReplayReader.Models.PlayerMovement playerMove in locations)

@@ -26,6 +26,28 @@ namespace FortniteReplayAnalyzer.Extensions
           "SHARD KEY (GameSessionId)" +
         ");");
 
+      string cosStats = new String("CREATE TABLE IF NOT EXISTS cosStats( " +
+          "sessionId VARCHAR(255)," +
+          "epicId VARCHAR(255)," +
+          "contrail VARCHAR(255), " +
+          "pickaxe VARCHAR(255), " +
+          "petskin VARCHAR(255), " +
+          "parts VARCHAR(255), " +
+          "musicpack VARCHAR(255), " +
+          "loadingscreen VARCHAR(255), " +
+          "itemwraps VARCHAR(255), " +
+          "isdefaultchar VARCHAR(255), " +
+          "herotype VARCHAR(255), " +
+          "glider VARCHAR(255), " +
+          "dances VARCHAR(255), " +
+          "gender VARCHAR(255), " +
+          "bodyType VARCHAR(255), " +
+          "bannerIcon  VARCHAR(255), " +
+          "charecter  VARCHAR(255), " +
+          "bannerColor VARCHAR(255), " +
+          "backpack VARCHAR(255) " +
+          ");");
+
       string llamasDDL = new String("" +
         "CREATE TABLE IF NOT EXISTS llamas(" +
         "" +
@@ -99,11 +121,13 @@ namespace FortniteReplayAnalyzer.Extensions
       var eliminationDDLQ = new SingleStoreCommand(eliminationsDDL, S2Conn);
       var playersDDLQ = new SingleStoreCommand(playersDDL, S2Conn);
       var playersMvDDLQ = new SingleStoreCommand(playerMvDDL, S2Conn);
+      var cosStatsDDLQ = new SingleStoreCommand(cosStats, S2Conn);
       schemaDDLQ.ExecuteNonQuery();
       sessionsDDLQ.ExecuteNonQuery();
       eliminationDDLQ.ExecuteNonQuery();
       playersDDLQ.ExecuteNonQuery();
       playersMvDDLQ.ExecuteNonQuery();
+      cosStatsDDLQ.ExecuteNonQuery();
     }
   }
 }

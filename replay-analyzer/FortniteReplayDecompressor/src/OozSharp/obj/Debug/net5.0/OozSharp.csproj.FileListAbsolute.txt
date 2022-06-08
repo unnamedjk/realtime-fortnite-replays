@@ -34,3 +34,15 @@ C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteRe
 C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\ref\OozSharp.dll
 C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.pdb
 C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.csproj.AssemblyReference.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\bin\Debug\net5.0\OozSharp.deps.json
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\bin\Debug\net5.0\OozSharp.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\bin\Debug\net5.0\ref\OozSharp.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\bin\Debug\net5.0\OozSharp.pdb
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.csproj.AssemblyReference.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.AssemblyInfoInputs.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.AssemblyInfo.cs
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.csproj.CoreCompileInputs.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\ref\OozSharp.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\OozSharp\obj\Debug\net5.0\OozSharp.pdb

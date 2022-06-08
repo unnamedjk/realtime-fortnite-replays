@@ -34,3 +34,15 @@ C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteRe
 C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.dll
 C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\ref\Unreal.Core.dll
 C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.pdb
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Debug\net5.0\Unreal.Core.deps.json
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Debug\net5.0\Unreal.Core.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Debug\net5.0\ref\Unreal.Core.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Debug\net5.0\Unreal.Core.pdb
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.csproj.AssemblyReference.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.AssemblyInfoInputs.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.AssemblyInfo.cs
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.csproj.CoreCompileInputs.cache
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\ref\Unreal.Core.dll
+C:\Users\Siddhartha_Om\Documents\GitHub\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Debug\net5.0\Unreal.Core.pdb

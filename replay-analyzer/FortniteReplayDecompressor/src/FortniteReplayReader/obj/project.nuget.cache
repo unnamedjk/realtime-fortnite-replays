@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jsoB9lgYE8++HvY+o8J3+iWq36udwp9mYNVgvDXI8rmqdxqDpBaUCtlVc8niBMN16MmubQMOMiAXQieLg/eRYQ==",
+  "dgSpecHash": "qpIBsi9q3IrcPd2ElPRy1DdL4YP510O69aspGPcSOBM7EnCyjD7g6Ut9mlmXswodOa7nvgHdC5L21zNGPEDrYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
+  "projectFilePath": "C:\\Users\\Siddhartha_Om\\Documents\\GitHub\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jkuntz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\Siddhartha_Om\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

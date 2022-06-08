@@ -61,7 +61,6 @@ namespace Analyzer
       var llamas = mapdata.Llamas;
       var stats = replay.Stats;
 
-      Console.WriteLine($"{stats.Revives.GetType()}");
 
       foreach (FortniteReplayReader.Models.SafeZone szone in mapdata.SafeZones)
       {

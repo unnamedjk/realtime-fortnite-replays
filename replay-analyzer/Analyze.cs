@@ -13,6 +13,8 @@ namespace Analyzer
 {
   class Analyze
   {
+    private static IEnumerable<FortniteReplayReader.Models.Llama> locations;
+
     static void Main(string[] args)
     {
       // Setup Service Collection / Logging
@@ -61,6 +63,22 @@ namespace Analyzer
       var llamas = mapdata.Llamas;
       var stats = replay.Stats;
 
+      //Llama Info Testing     
+      Console.WriteLine($"{llamas.Count}");
+      Console.WriteLine($"{llamas.ToString()}");
+      //Console.WriteLine($"{FortniteReplayReader.Models.Llama llamaPositions in mapdata.Llamas}");
+
+      /*Gathering Llama Positions
+      foreach (FortniteReplayReader.Models.Llama llamaPositions in mapdata.Llamas)
+      {
+        Console.WriteLine($"Llama Positions: {llamaPositions.Id}");
+      }
+      */
+       foreach (FortniteReplayReader.Models.Llama LlamaInfo in mapdata.Llamas)
+      {
+        Console.WriteLine($"Llama ID: {LlamaInfo.Id} Llama Location: {LlamaInfo.Location} Was It Looted: {LlamaInfo.Looted} When Was It Looted: {LlamaInfo.LootedTime}");
+      }
+      
 
       foreach (FortniteReplayReader.Models.SafeZone szone in mapdata.SafeZones)
       {

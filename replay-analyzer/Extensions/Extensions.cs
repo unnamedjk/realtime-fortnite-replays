@@ -107,6 +107,14 @@ namespace FortniteReplayAnalyzer.Extensions
         $"'{deathTime}'" +
         $");", S2Connection);
 
+      /*Llama Details (May Not Be Needed)
+      var llamaId = FortniteReplayReader.Models.Llama.Id;
+      var llamaLocation = FortniteReplayReader.Models.Llama.Location;
+      var llamaLooted = FortniteReplayReader.Models.Llama.looted;
+      var lammaLootedTime = FortniteReplayReader.Models.Llama.LootedTime;
+      var llamaLandingLocation = FortniteReplayReader.Models.Llama.LandingLocation;
+      */
+
       var cosStats = new SingleStoreCommand($"INSERT IGNORE INTO cosStats VALUES (" +
         $"'{GameSessionId}'," +
         $"'{player.EpicId}'," +

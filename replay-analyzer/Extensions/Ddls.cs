@@ -52,10 +52,14 @@ namespace FortniteReplayAnalyzer.Extensions
         "CREATE TABLE IF NOT EXISTS llamas(" +
         "" +
       ");");
+
       string dropsDDL = new String("" +
         "CREATE TABLE IF NOT EXISTS drops(" +
+        "sessionId VARCHAR(255)," +
+        "dropId VARCHAR(255)," +
         "" +
       ");");
+
       string eliminationsDDL = new String("" +
         "CREATE TABLE IF NOT EXISTS SessionEliminations (" +
           "eliminationId VARCHAR(36)," +
@@ -122,12 +126,14 @@ namespace FortniteReplayAnalyzer.Extensions
       var playersDDLQ = new SingleStoreCommand(playersDDL, S2Conn);
       var playersMvDDLQ = new SingleStoreCommand(playerMvDDL, S2Conn);
       var cosStatsDDLQ = new SingleStoreCommand(cosStats, S2Conn);
+      var dropsDDLQ = new SingleStoreCommand(dropsDDL, S2Conn);
       schemaDDLQ.ExecuteNonQuery();
       sessionsDDLQ.ExecuteNonQuery();
       eliminationDDLQ.ExecuteNonQuery();
       playersDDLQ.ExecuteNonQuery();
       playersMvDDLQ.ExecuteNonQuery();
       cosStatsDDLQ.ExecuteNonQuery();
+      dropsDDLQ.ExecuteNonQuery();
     }
   }
 }

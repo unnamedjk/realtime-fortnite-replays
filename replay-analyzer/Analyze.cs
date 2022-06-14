@@ -8,12 +8,12 @@ using Unreal.Core.Models.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FortniteReplayAnalyzer.Extensions;
+using SingleStoreConnector;
 
 namespace Analyzer
 {
   class Analyze
   {
-    private static IEnumerable<FortniteReplayReader.Models.Llama> locations;
 
     static void Main(string[] args)
     {
@@ -60,30 +60,33 @@ namespace Analyzer
       var reader = new ReplayReader(logger, ParseMode.Full);
       var replay = reader.ReadReplay(replayFile);
       var mapdata = replay.MapData;
-      var llamas = mapdata.Llamas;
+      var llamas = replay.MapData.Llamas;
       var stats = replay.Stats;
+      var drops = replay.MapData.SupplyDrops;
 
-      
-
-      //Llama Info Testing     
-      var llamaId = llamas.Id;
+      /*Llama Info Testing     
       Console.WriteLine($"{llamas.Count}");
       Console.WriteLine($"{llamas.ToString()}");
-      //Console.WriteLine($"{FortniteReplayReader.Models.Llama llamaPositions in mapdata.Llamas}");
-
-      /*Gathering Llama Positions
-      foreach (FortniteReplayReader.Models.Llama llamaPositions in mapdata.Llamas)
+      
+       foreach (FortniteReplayReader.Models.Llama llama in mapdata.Llamas)
       {
-        Console.WriteLine($"Llama Positions: {llamaPositions.Id}");
+        //Console.WriteLine($"Llama ID: {llama.Id} Llama Location: {llama.Location} Was It Looted: {llama.Looted} When Was It Looted: {llama.LootedTime}");
+       
+        Console.WriteLine($"Llama ID: {llama.Id}");
+        Console.WriteLine($"Moving On");
       }
       */
-       foreach (FortniteReplayReader.Models.Llama LlamaInfo in mapdata.Llamas)
-      {
-        Console.WriteLine($"Llama ID: {LlamaInfo.Id} Llama Location: {LlamaInfo.Location} Was It Looted: {LlamaInfo.Looted} When Was It Looted: {LlamaInfo.LootedTime}");
-      }
       
-
-
+      //Drops Info Testing
+      foreach (FortniteReplayReader.Models.SupplyDrop drop in drops)
+      {
+         var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES( " +
+         $"'{drop.Id}'," +
+         $");",
+         S2Conn
+         );
+        dropInsert.ExecuteNonQuery();
+      }
 
       foreach (FortniteReplayReader.Models.SafeZone szone in mapdata.SafeZones)
       {

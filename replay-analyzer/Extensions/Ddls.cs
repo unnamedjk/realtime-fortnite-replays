@@ -54,11 +54,28 @@ namespace FortniteReplayAnalyzer.Extensions
       ");");
 
       string dropsDDL = new String("" +
-        "CREATE TABLE IF NOT EXISTS drops(" +
-        "sessionId VARCHAR(255)," +
-        "dropId VARCHAR(255)," +
-        "" +
-      ");");
+        "CREATE TABLE IF NOT EXISTS SessionDrops(" +
+        "sessionId VARCHAR(36) NOT NULL," +
+        "dropId VARCHAR(36) NOT NULL," +
+        "spawnedPickups bool NOT NULL,"+
+        "looted NOT NULL," +
+        "lootedTime VARCHAR(255) NOT NULL," +
+        "balloonPop NOT NULL," +
+        "balloonPopTime VARCHAR(255) NOT NULL," +
+        "fallHeight VARCHAR(255) NOT NULL," +
+        "fallSpeed VARCHAR(255) NOT NULL," +
+        "landingLocation VARCHAR(255) NOT NULL," +
+        "SHARD KEY (dropId)" +
+        ");");
+
+      /* Create Table If Not Exists drops(
+       * sessionId VARCHAR(36) Not Null,
+       * dropId VARCHAR(36) Not Null,
+       * SHARD KEY (dropId)
+       * )
+        
+        
+       */
 
       string eliminationsDDL = new String("" +
         "CREATE TABLE IF NOT EXISTS SessionEliminations (" +

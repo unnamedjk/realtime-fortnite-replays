@@ -63,6 +63,7 @@ namespace Analyzer
       var llamas = replay.MapData.Llamas;
       var stats = replay.Stats;
       var drops = replay.MapData.SupplyDrops;
+      var gameId = replay.GameData.GameSessionId;
 
       /*Llama Info Testing     
       Console.WriteLine($"{llamas.Count}");
@@ -80,12 +81,18 @@ namespace Analyzer
       //Drops Info Testing
       foreach (FortniteReplayReader.Models.SupplyDrop drop in drops)
       {
-         var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES( " +
-         $"'{drop.Id}'," +
-         $");",
-         S2Conn
-         );
+        var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES ('{gameId}', '{drop.Id}, '{drop.HasSpawnedPickups}', '{drop.Looted}', '{drop.LootedTime}', '{drop.BalloonPopped}', '{drop.BalloonPoppedTime}, +" +
+          $" '{drop.FallHeight}', '{drop.FallSpeed}', '{drop.LandingLocation}' +" +
+          $");", S2Conn);
         dropInsert.ExecuteNonQuery();
+        /*
+       var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES( " +
+        $"'{gameId}'," +
+        $"'{drop.Id}'," +
+        $");",
+        S2Conn
+        );
+        */
       }
 
       foreach (FortniteReplayReader.Models.SafeZone szone in mapdata.SafeZones)

@@ -77,13 +77,22 @@ namespace Analyzer
         Console.WriteLine($"Moving On");
       }
       */
-      
+
       //Drops Info Testing
+
+      int hasSpawnedPickups = 0;
+      int hasBeenLooted = 0;
+      int hasBalloonPopped = 0;
+
       foreach (FortniteReplayReader.Models.SupplyDrop drop in drops)
       {
-        var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES ('{gameId}', '{drop.Id}, '{drop.HasSpawnedPickups}', '{drop.Looted}', '{drop.LootedTime}', '{drop.BalloonPopped}', '{drop.BalloonPoppedTime}, +" +
-          $" '{drop.FallHeight}', '{drop.FallSpeed}', '{drop.LandingLocation}' +" +
+        if (drop.HasSpawnedPickups == true) hasSpawnedPickups = 1;
+        if (drop.Looted == true) hasBeenLooted = 1;
+        if (drop.BalloonPopped == true) hasBalloonPopped = 1;
+        var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES ('{gameId}', '{drop.Id}', {hasSpawnedPickups}, {hasBeenLooted}, '{drop.LootedTime}', {hasBalloonPopped}, '{drop.BalloonPoppedTime}'," +
+          $" '{drop.FallHeight}', '{drop.FallSpeed}', '{drop.LandingLocation.X}', '{drop.LandingLocation.Y}', '{drop.LandingLocation.Z}'" +
           $");", S2Conn);
+        //Console.WriteLine(dropInsert.CommandText);
         dropInsert.ExecuteNonQuery();
         /*
        var dropInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionDrops VALUES( " +

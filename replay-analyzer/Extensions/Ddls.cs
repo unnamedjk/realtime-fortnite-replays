@@ -57,14 +57,16 @@ namespace FortniteReplayAnalyzer.Extensions
         "CREATE TABLE IF NOT EXISTS SessionDrops(" +
         "sessionId VARCHAR(36) NOT NULL," +
         "dropId VARCHAR(36) NOT NULL," +
-        "spawnedPickups bool NOT NULL,"+
-        "looted NOT NULL," +
-        "lootedTime VARCHAR(255) NOT NULL," +
-        "balloonPop NOT NULL," +
-        "balloonPopTime VARCHAR(255) NOT NULL," +
+        "spawnedPickups BOOL NOT NULL," +
+        "looted BOOL NOT NULL," +
+        "lootedTime VARCHAR(255)," +
+        "balloonPop BOOL NOT NULL," +
+        "balloonPopTime VARCHAR(255)," +
         "fallHeight VARCHAR(255) NOT NULL," +
         "fallSpeed VARCHAR(255) NOT NULL," +
-        "landingLocation VARCHAR(255) NOT NULL," +
+        "landingLocationX VARCHAR(255) NOT NULL," +
+        "landingLocationY VARCHAR(255) NOT NULL," +
+        "landingLocationZ VARCHAR(255) NOT NULL," +
         "SHARD KEY (dropId)" +
         ");");
 

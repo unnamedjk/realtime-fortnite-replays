@@ -63,6 +63,7 @@ namespace Analyzer
       var llamas = replay.MapData.Llamas;
       var stats = replay.Stats;
       var drops = replay.MapData.SupplyDrops;
+      var vans = replay.MapData.RebootVans;
       var gameId = replay.GameData.GameSessionId;
 
       /*Llama Info Testing     

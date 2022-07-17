@@ -1,0 +1,12 @@
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.deps.json
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.dll
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Release\net5.0\ubuntu.20.04-x64\ref\Unreal.Core.dll
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\bin\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.pdb
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.csproj.AssemblyReference.cache
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.AssemblyInfoInputs.cache
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.AssemblyInfo.cs
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.csproj.CoreCompileInputs.cache
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.dll
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\ref\Unreal.Core.dll
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Core\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Core.pdb

@@ -1,0 +1,4 @@
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Encryption\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Encryption.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Encryption\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Encryption.AssemblyInfoInputs.cache
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Encryption\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Encryption.AssemblyInfo.cs
+C:\Users\jkuntz\Development\realtime-fortnite-replays\replay-analyzer\FortniteReplayDecompressor\src\Unreal.Encryption\obj\Release\net5.0\ubuntu.20.04-x64\Unreal.Encryption.csproj.CoreCompileInputs.cache

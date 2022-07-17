@@ -1,1 +1,3 @@
-bin/
+﻿replay-analyzer/.vs
+replay-analyzer/obj
+replay-analyzer/bin

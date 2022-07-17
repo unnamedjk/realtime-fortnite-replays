@@ -1,2 +1,5 @@
-# s2fn-demo
-Processing &amp; analyzing Fortnite replay data in real-time using SingleStore
+# Realtime Fortnite Replays
+This project is aimed at processing and streaming data to SingleStore.
+
+# Requirements
+- Docker

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Numerics;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using Unreal.Core;
-using Unreal.Core.Attributes;
-using Unreal.Core.Models;
-using System.IO.Compression;
 using System.Threading.Tasks;
 using SingleStoreConnector;
 namespace FortniteReplayAnalyzer.Extensions
@@ -21,151 +16,51 @@ namespace FortniteReplayAnalyzer.Extensions
         await func(value);
       }
     }
-    public static SingleStoreConnectionStringBuilder S2ConnectString(string host, uint port, string username, string password)
+    public static List<List<T>> partition<T>(this List<T> values, int chunkSize)
     {
-      var ConnectionString = new SingleStoreConnectionStringBuilder
-      {
-        Server = host,
-        UserID = username,
-        Port = port,
-        Password = password
-      };
-      return ConnectionString;
+      return values.Select((x, i) => new { Index = i, Value = x })
+          .GroupBy(x => x.Index / chunkSize)
+          .Select(x => x.Select(v => v.Value).ToList())
+          .ToList();
     }
-
-    public static SingleStoreConnection S2Connect(SingleStoreConnectionStringBuilder ConnectionString)
+    public static void ToCSV(this DataTable dtDataTable, string strFilePath)
     {
-      var S2Connection = new SingleStoreConnection(ConnectionString.ToString());
-      return S2Connection;
-    }
-    public static void ProccessPlayer(FortniteReplayReader.Models.GameData gameData, FortniteReplayReader.Models.PlayerData player, SingleStoreConnectionStringBuilder ConnectionString)
-    {
-      var S2Connection = new SingleStoreConnection(ConnectionString.ToString());
-      S2Connection.Open();
-      S2Connection.ChangeDatabase("fn_stats");
-      var GameSessionId = gameData.GameSessionId;
-      if (player.IsBot)
+      StreamWriter sw = new StreamWriter(strFilePath, false);
+      //headers    
+      for (int i = 0; i < dtDataTable.Columns.Count; i++)
       {
-        var playerId = player.BotId;
+        sw.Write(dtDataTable.Columns[i]);
+        if (i < dtDataTable.Columns.Count - 1)
+        {
+          sw.Write(",");
+        }
       }
-      else
+      sw.Write(sw.NewLine);
+      foreach (DataRow dr in dtDataTable.Rows)
       {
-        var playerId = player.Id;
+        for (int i = 0; i < dtDataTable.Columns.Count; i++)
+        {
+          if (!Convert.IsDBNull(dr[i]))
+          {
+            string value = dr[i].ToString();
+            if (value.Contains(','))
+            {
+              value = String.Format("\"{0}\"", value);
+              sw.Write(value);
+            }
+            else
+            {
+              sw.Write(dr[i].ToString());
+            }
+          }
+          if (i < dtDataTable.Columns.Count - 1)
+          {
+            sw.Write(",");
+          }
+        }
+        sw.Write(sw.NewLine);
       }
-      
-      // Player Details
-      var isBot = player.IsBot;
-      var playerCurWeapon = player.CurrentWeapon;
-      var playerTeamKills = player.TeamKills;
-      var playerTeamIdx = player.TeamIndex;
-      var playerPlatformNetId = player.PlatformUniqueNetId;
-      var playerPlatform = player.Platform;
-      var playerPlacement = player.Placement;
-      var playerLevel = player.Level;
-      var playerKills = player.Kills;
-      var locations = player.Locations;
-      
-      // Player Costmetics
-      var contrail = player.Cosmetics.SkyDiveContrail;
-      var pickaxe = player.Cosmetics.Pickaxe;
-      var petskin = player.Cosmetics.PetSkin;
-      var parts = player.Cosmetics.Parts;
-      var musicpack = player.Cosmetics.MusicPack;
-      var loadingscreen = player.Cosmetics.LoadingScreen;
-      var itemwraps = player.Cosmetics.ItemWraps;
-      var isdefaultchar = player.Cosmetics.IsDefaultCharacter;
-      var herotype = player.Cosmetics.HeroType;
-      var glider = player.Cosmetics.Glider;
-      var dances = player.Cosmetics.Dances;
-      var gender = player.Cosmetics.CharacterGender;
-      var bodyType = player.Cosmetics.CharacterBodyType;
-      var bannerIcon = player.Cosmetics.BannerIconId;
-      var charecter = player.Cosmetics.Character;
-      var bannerColor = player.Cosmetics.BannerColorId;
-      var backpack = player.Cosmetics.Backpack;
-
-      // Player Death Details
-      var deathTime = player.DeathTime;
-      var deathTags = player.DeathTags;
-      var deathLocation = player.DeathLocation;
-      var deathCircumstance = player.DeathCircumstance;
-      var deathCause = player.DeathCause;
-      var playerInsert = new SingleStoreCommand($"INSERT IGNORE INTO SessionPlayers VALUES(" +
-        $"'{GameSessionId}'," +
-        $"'{player.EpicId}'," +
-        $"'{player.IsBot}'," +
-        $"'{playerKills.GetValueOrDefault(0)}'," +
-        $"'{playerLevel.GetValueOrDefault(0)}'," +
-        $"'{playerPlacement}'," +
-        $"'{playerCurWeapon}'," +
-        $"'{playerPlatform}'," +
-        $"'{playerTeamIdx}'," +
-        $"'{playerTeamKills}'," +
-        $"'{deathCause}'," +
-        $"'{deathCircumstance}'," +
-        $"'{deathLocation}'," +
-        $"'{deathTime}'" +
-        $");", S2Connection);
-
-      // Console.WriteLine(playerInsert.CommandText);
-      playerInsert.ExecuteNonQuery();
-
-      // Collect Player Movement Data
-      foreach (FortniteReplayReader.Models.PlayerMovement playerMove in locations)
-      {
-        // convert to async for each player  
-        var crouched = playerMove.bIsCrouched;
-        var movement = playerMove.ReplicatedMovement;
-        var worldTime = playerMove.ReplicatedWorldTimeSeconds;
-        var ziplining = playerMove.bIsZiplining;
-        var waitingForEmote = playerMove.bIsWaitingForEmoteInteraction;
-        var isTargeting = playerMove.bIsTargeting;
-        var isSprinting = playerMove.bIsSprinting;
-        var isSlopeSliding = playerMove.bIsSlopeSliding;
-        var isDivingFromPad = playerMove.bIsSkydivingFromLaunchPad;
-        var isDivingFromBus = playerMove.bIsSkydivingFromBus;
-        var isDiving = playerMove.bIsSkydiving;
-        var isEmoting = playerMove.bIsPlayingEmote;
-        var ParachuteOpen = playerMove.bIsParachuteOpen;
-        var ParachuteForced = playerMove.bIsParachuteForcedOpen;
-        var isJumping = playerMove.bIsJumping;
-        var isInWater = playerMove.bIsInWaterVolume;
-        var isInStorm = playerMove.bIsInAnyStorm;
-        var isHonking = playerMove.bIsHonking;
-        var isDBNO = playerMove.bIsDBNO;
-        var location = playerMove.ReplicatedMovement?.Location;
-        float x = location.X;
-        float y = location.Y;
-        float z = location.Z;
-        var playerMvInsert = new SingleStoreCommand($"INSERT INTO SessionPlayerMovement VALUES(" +
-          $"'{player.EpicId}'," +
-          $"'{GameSessionId}'," +
-          $"'{crouched}'," +
-          $"{worldTime}," +
-          $"'{ziplining}'," +
-          $"'{waitingForEmote}'," +
-          $"'{isTargeting}'," +
-          $"'{isSprinting}'," +
-          $"'{isSlopeSliding}'," +
-          $"'{isDiving}'," +
-          $"'{isDivingFromBus}'," +
-          $"'{isDivingFromPad}'," +
-          $"'{ParachuteOpen}'," +
-          $"'{ParachuteForced}'," +
-          $"'{isJumping}'," +
-          $"'{isInWater}'," +
-          $"'{isInStorm}'," +
-          $"'{isHonking}'," +
-          $"'{isDBNO}'," +
-          $"'{location}'" +
-          $"{x}," +
-          $"{y}" +
-          $");", S2Connection);
-        // Console.WriteLine(playerMvInsert.CommandText);
-        // playerMvInsert.ExecuteNonQuery();
-        Thread.Sleep(333);
-      }
-      S2Connection.Close();
+      sw.Close();
     }
   }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {}
+    "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
+    "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+        "projectUniqueName": "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
         "projectName": "OozSharp",
-        "projectPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
-        "packagesPath": "C:\\Users\\jkuntz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\obj\\",
+        "projectPath": "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+        "packagesPath": "C:\\Users\\SingleStore\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jkuntz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SingleStore\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +49,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
         }
       }
     }

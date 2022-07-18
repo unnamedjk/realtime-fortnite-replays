@@ -39,6 +39,7 @@ namespace FortniteReplayAnalyzer.Extensions
       string GameSessionId      = gameData.GameSessionId;
       string WinningPlayerIds   = String.Join(",", gameData.WinningPlayerIds);
       string WinningTeamId      = gameData.WinningTeam.ToString();
+      sessionTable.Rows.Add(GameSessionId, NanoGameSessionId, WinningPlayerIds, WinningTeamId, mapInfo, teamSize, totalTeams, totalBots, gridCountX, gridCountY);
       return sessionTable;
     }
 
@@ -60,7 +61,23 @@ namespace FortniteReplayAnalyzer.Extensions
       return playersTable;
     }
 
-    public static void ParseEliminations(string GameSessionId, FortniteReplayReader.Models.Events.PlayerElimination elim) {
+    public static DataTable ParseEliminations(string GameSessionId, FortniteReplayReader.Models.Events.PlayerElimination elim) {
+      DataTable eliminationsTable = new DataTable();
+      
+      eliminationsTable.Columns.Add("GameSessionId", typeof(string));
+      eliminationsTable.Columns.Add("EliminationId", typeof(string));
+      eliminationsTable.Columns.Add("EliminatedId", typeof(string));
+      eliminationsTable.Columns.Add("EliminatorId", typeof(string));
+      eliminationsTable.Columns.Add("ElimDistance", typeof(string));
+      eliminationsTable.Columns.Add("SelfElim", typeof(string));
+      eliminationsTable.Columns.Add("GunType", typeof(string));
+      eliminationsTable.Columns.Add("IsValidLoc", typeof(string));
+      eliminationsTable.Columns.Add("Knocked", typeof(string));
+      eliminationsTable.Columns.Add("EliminatorIsBot", typeof(string));
+      eliminationsTable.Columns.Add("EliminatorLocation", typeof(string));
+      eliminationsTable.Columns.Add("EliminatedIsBot", typeof(string));
+      eliminationsTable.Columns.Add("EliminatedLocation", typeof(string));
+
       // Elimination Details
       var elimId = elim.Info.Id;
       var elimDistance = elim.Distance;
@@ -82,8 +99,22 @@ namespace FortniteReplayAnalyzer.Extensions
       var eliminatorIsBot = eliminatorInfo.IsBot;
       var eliminatorLoc = eliminatorInfo.Location;
       var eliminatorId = eliminatorInfo.Id;
+      eliminationsTable.Rows.Add(
+        GameSessionId.ToString(),
+        elimId.ToString(),
+        eliminatedId.ToString(),
+        eliminatorId.ToString(),
+        elimDistance.ToString(),
+        selfElim.ToString(),
+        gunType.ToString(),
+        validLoc.ToString(),
+        knocked.ToString(),
+        eliminatorIsBot.ToString(),
+        eliminatorLoc.ToString(),
+        eliminatedIsBot.ToString(),
+        eliminatedLoc.ToString()) ;
+      return eliminationsTable;
     }
-
 
     public static DataTable ParseSessionPlayers(FortniteReplayReader.Models.FortniteReplay replay, String NanoGameSessionId, DataTable playersTable)
     {
@@ -166,18 +197,6 @@ namespace FortniteReplayAnalyzer.Extensions
           deathLocation,
           deathTime
         );
-        /*
-        playerTable.ToCSV(fileName);
-        FileInfo fileToCompress = new FileInfo(fileName);
-        using (FileStream originalFileStream = fileToCompress.OpenRead()) {
-          using (FileStream compressedFileStream = File.Create(fileName + ".gz")) {
-            using (GZipStream compressionStream = new GZipStream(compressedFileStream, CompressionMode.Compress)) {
-              originalFileStream.CopyTo(compressionStream);
-            }
-          }
-        }
-        fileToCompress.Delete();
-        */
       }
       return playerSessionTable;
     }
@@ -193,12 +212,7 @@ namespace FortniteReplayAnalyzer.Extensions
       playerMovementTable.Columns.Add("x", typeof(float));
       playerMovementTable.Columns.Add("y", typeof(float));
       playerMovementTable.Columns.Add("z", typeof(float));
-      /*
-      filePath = $".\\export\\{NanoGameSessionId}\\";
-      fileName = $".\\export\\{NanoGameSessionId}\\SessionPlayerMovement.csv";
-      bool pathExists = System.IO.Directory.Exists(filePath);
-      if (pathExists == false) { System.IO.Directory.CreateDirectory(filePath); }
-      */
+      
       foreach (FortniteReplayReader.Models.PlayerData player in players)
       {
         //KeyValuePair<string, string> results = playersDict.FirstOrDefault(v => v.Key.Equals(player.EpicId));

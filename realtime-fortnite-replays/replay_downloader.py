@@ -2,8 +2,10 @@ from html.parser import HTMLParser
 import urllib.request
 import urllib.response
 import requests
+import multiprocessing
 import json
 import wget
+import threading
 import time
 import os
 class LinkScrape(HTMLParser):
@@ -44,6 +46,7 @@ def get_rounds():
           file.close()
 
 if __name__ == '__main__':
+  th = []
   base_url        = "https://fortnite-replay.info"
   rounds          = open('rounds.txt', 'r')
   rounds          = rounds.readlines()
@@ -61,7 +64,7 @@ if __name__ == '__main__':
 
     for session in sessionids:
       file_name = f'{session}.replay'
-      file_path = f'r:\\replays\\{file_name}'
+      file_path = f'..\\replay-samples\\{file_name}'
       if not os.path.exists(file_path):
         print(f'\nurl: {base_url}/match/{session}/')
         print(f'preparing: {session}')
@@ -75,11 +78,20 @@ if __name__ == '__main__':
         start_time = time.time()
         while info_resp["isParsing"] == True or info_resp["isInQueue"] == True or info_resp["downloaded"] == False:
           print(f'info: {info_resp}')
-          if time.time() - start_time >= 1:
+          if time.time() - start_time >= 20:
             break
           info_resp = json.loads(requests.get(f'{base_url}/match/{session}/info?includeData=true&includeEvents=true&includeCheckpoints=true').content)
-          time.sleep(5)
+          print("Waiting for replay to parse...")
+          time.sleep(20)
         try:
-          wget.download(f'{base_url}/match/{session}/download?includeData=true&includeEvents=true&includeCheckpoints=true', file_path)
+          print(f"Adding {session} to the download list")
+          x = threading.Thread(
+            target=wget.download,
+            args=(f'{base_url}/match/{session}/download?includeData=true&includeEvents=true&includeCheckpoints=true',
+            file_path,
+            )
+          )
+          th.append(x)
+          x.start()
         except:
           pass

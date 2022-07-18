@@ -1,6 +1,8 @@
 ﻿replay-analyzer/.vs
 replay-analyzer/obj
 replay-analyzer/bin
+replay-samples/*
 export.csv
+
 export.parquet
 *__pycache__*

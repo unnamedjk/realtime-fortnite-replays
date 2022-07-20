@@ -3,6 +3,7 @@ replay-analyzer/obj
 replay-analyzer/bin
 replay-samples/*
 export.csv
+ignore_*
 
 export.parquet
 *__pycache__*

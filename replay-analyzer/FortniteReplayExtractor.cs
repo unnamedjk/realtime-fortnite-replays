@@ -17,6 +17,8 @@ namespace Analyzer
 {
   class FortniteReplayExtractor
   {
+    static public string replaysPath;
+    static public string replaysDstFolder;
     static public FortniteReplayReader.Models.FortniteReplay GetReplay(string replayPath) {
       var serviceCollection = new ServiceCollection()
         .AddLogging(loggingBuilder => loggingBuilder
@@ -44,9 +46,6 @@ namespace Analyzer
       replayDataset.Tables["sessionPlayerMovement"].Merge(SessionParser.ParsePlayerMovements(replay, nanoGameSessionId, replayDataset.Tables["players"]));
       return replayDataset;
     }
-    
-    static public string replaysPath;
-    private static SemaphoreSlim semaphore;
 
     static void Main(string[] args)
     {
@@ -67,6 +66,7 @@ namespace Analyzer
       int replayChunkSize;
       replaysPath = Convert.ToString(args[0]);
       replayChunkSize = Convert.ToInt32(args[1]);
+      replaysDstFolder = Convert.ToString(args[2]);
       DirectoryInfo replaysDir = new DirectoryInfo(replaysPath);
       List<FileInfo> dirFiles = new List<FileInfo>(replaysDir.GetFiles());
       List<FileInfo> replayFiles = new List<FileInfo>();
@@ -102,14 +102,15 @@ namespace Analyzer
           replayCollection.Merge(GetFortniteReplayDataSet(replay.Result));
         }
 
-      Console.WriteLine("Writing replay datasets to CSV...");
+      
       foreach (DataTable tbl in replayCollection.Tables)
         {
           string tblName = new string(tbl.TableName);
-          string filePath = $".\\{chunkIndex}\\";
-          string fileName = $".\\{chunkIndex}\\{tblName}.csv";
+          string filePath = $".\\{replaysDstFolder}\\{chunkIndex}\\";
+          string fileName = $".\\{replaysDstFolder}\\{chunkIndex}\\{tblName}.csv";
           bool pathExists = System.IO.Directory.Exists(filePath);
           if (pathExists == false) { System.IO.Directory.CreateDirectory(filePath); }
+          Console.WriteLine($"Writing {fileName} CSV...");
           tbl.ToCSV(fileName);
           FileInfo fileToCompress = new FileInfo(fileName);
 
@@ -119,6 +120,7 @@ namespace Analyzer
             {
               using (GZipStream compressionStream = new GZipStream(compressedFileStream, CompressionMode.Compress))
               {
+                Console.WriteLine($"Compressing {fileName}");
                 originalFileStream.CopyTo(compressionStream);
               }
             }
@@ -126,8 +128,10 @@ namespace Analyzer
           Console.WriteLine("Deleting original CSV...");
           fileToCompress.Delete();
         }
+        Console.WriteLine("Finished chunk...");
         chunkIndex++;
       }
+      Console.WriteLine("Completed");
      /*
        // Get Replay Metadata
           int replayLength = Convert.ToInt32(replay.Info.LengthInMs);

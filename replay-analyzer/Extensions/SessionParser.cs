@@ -38,6 +38,7 @@ namespace FortniteReplayAnalyzer.Extensions
       var gridCountX            = mapData.GridCountX;
       string GameSessionId      = gameData.GameSessionId;
       string WinningPlayerIds   = String.Join(",", gameData.WinningPlayerIds);
+      
       string WinningTeamId      = gameData.WinningTeam.ToString();
       sessionTable.Rows.Add(GameSessionId, NanoGameSessionId, WinningPlayerIds, WinningTeamId, mapInfo, teamSize, totalTeams, totalBots, gridCountX, gridCountY);
       return sessionTable;
@@ -63,7 +64,6 @@ namespace FortniteReplayAnalyzer.Extensions
 
     public static DataTable ParseEliminations(string GameSessionId, FortniteReplayReader.Models.Events.PlayerElimination elim) {
       DataTable eliminationsTable = new DataTable();
-      
       eliminationsTable.Columns.Add("GameSessionId", typeof(string));
       eliminationsTable.Columns.Add("EliminationId", typeof(string));
       eliminationsTable.Columns.Add("EliminatedId", typeof(string));

@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HB3p/oPYmUZ+o0yqsn7L6Xcc/okDE3zaSibSekKB4bCek/yDb+b5pcYEs/H+6Y0ZmZgwPkH4CJzZG5iEyyHjlg==",
+  "dgSpecHash": "jFvm07NoRKPsMnB3Ko5QTPJ4CpRpu32B8/M9orGpfgqbo9kiM+uiv06iQA7bfzf78te52CFImRGZt0RPod1wxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
+  "projectFilePath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\FortniteReplayReader\\FortniteReplayReader.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\jkuntz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jkuntz\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\jkuntz\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

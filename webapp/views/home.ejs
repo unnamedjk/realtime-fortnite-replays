@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Replays Viewer</title>
+</head>
+  
+<body>
+    <% data.forEach(element => { %>
+    <h2><%= element.title %></h2>
+      
+<p><%= element.content %></p>
+  
+    <% }) %>
+  
+    <form action="/" method="post">
+        <input type="text" placeholder="Title" name="inputTitle">
+        <input type="text" placeholder="Content" name="inputContent">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+  
+</html>

@@ -34,7 +34,7 @@ namespace Unreal.Core
         /// <summary>
         /// <see cref="NetworkReplayVersion"/> of current Archive.
         /// </summary>
-        public NetworkReplayVersion NetworkReplayVersion { get; set; }
+        public NetworkReplayVersion? NetworkReplayVersion { get; set; }
 
         /// <summary>
         /// Position in current Archive. Set with <see cref="Seek(int, SeekOrigin)"/>

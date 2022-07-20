@@ -1,5 +1,5 @@
 ﻿using SingleStoreConnector;
-namespace FortniteReplayAnalyzer.Extensions
+namespace FortniteReplayExtractor.Extensions
 {
   class Schemas
   {

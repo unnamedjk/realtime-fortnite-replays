@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9ZxhOc5e4JaBd+hs0XtjQlDADRHrxF8xo2AGZYPpObhNMceTIgmevR+gpT4Bpx/imQLPsnlGAxxSNdt2+FBSbA==",
+  "dgSpecHash": "cP6bUz5abGsH2M0LATTetDVWWFfJ2B/5RqX2ygCf9akm3//+inCBLyizHZK7QA9I36azGI4lEoulsxOzHzmL7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\OozSharp\\OozSharp.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

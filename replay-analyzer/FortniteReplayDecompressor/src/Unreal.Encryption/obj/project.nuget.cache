@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zCUzZf+5ZxnGfUPX6l9EehBY64rHYMDdivQovbrzBhagmWvo4kFL3cEhYWhv3d5beufbz8iAhuawB1wTp5nZ9g==",
+  "dgSpecHash": "GJ2JigmkCLf3X5v+hP7Yjizck0Qz7SzokXkwPyh7MvkqXd56nVoOho7JyQIlLCDGlNnR+0p4Jy24bbViElloYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SingleStore\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\SingleStore\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\jkuntz\\Development\\realtime-fortnite-replays\\replay-analyzer\\FortniteReplayDecompressor\\src\\Unreal.Encryption\\Unreal.Encryption.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

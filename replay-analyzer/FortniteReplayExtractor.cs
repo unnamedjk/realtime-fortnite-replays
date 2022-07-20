@@ -5,15 +5,13 @@ using System;
 using System.Diagnostics;
 using Unreal.Core.Models.Enums;
 using System.Collections.Generic;
-using FortniteReplayAnalyzer.Extensions;
-using Nanoid;
-using System.Threading;
+using FortniteReplayExtractor.Extensions;
 using System.IO;
 using System.Data;
 using System.IO.Compression;
 using System.Threading.Tasks;
 
-namespace Analyzer
+namespace FortniteReplayExtractor
 {
   class FortniteReplayExtractor
   {
@@ -81,6 +79,8 @@ namespace Analyzer
       foreach (List<FileInfo> replayChunk in replayChunks)
       {
         List<Task<FortniteReplayReader.Models.FortniteReplay>> readReplayTasks = new List<Task<FortniteReplayReader.Models.FortniteReplay>>();
+        List<Task<DataSet>> replayCollectionTasks = new List<Task<DataSet>>();
+        List<Task<DataSet>> replayMergeTasks = new List<Task<DataSet>>();
         List<Task> getReplayDatasets = new List<Task>();
         DataSet replayCollection = new DataSet();
         Console.WriteLine($"\nChunk: {chunkIndex}/{replayChunks.Count}");
@@ -99,7 +99,13 @@ namespace Analyzer
         Console.WriteLine("Collecting Replay Datasets and merging...");
         foreach (Task<FortniteReplayReader.Models.FortniteReplay> replay in readReplayTasks)
         {
-          replayCollection.Merge(GetFortniteReplayDataSet(replay.Result));
+          replayCollectionTasks.Add(Task.Run(function: () => GetFortniteReplayDataSet(replay.Result)));
+
+          foreach (Task<DataSet> replayDataset in replayCollectionTasks)
+          {
+            replayDataset.Wait();
+            replayCollection.Merge(replayDataset.Result,true);
+          }
         }
 
       

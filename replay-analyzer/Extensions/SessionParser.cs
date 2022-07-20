@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
-using SingleStoreConnector;
-using System.IO;
-using System.IO.Compression;
 
-namespace FortniteReplayAnalyzer.Extensions
+namespace FortniteReplayExtractor.Extensions
 {
   class SessionParser
   {

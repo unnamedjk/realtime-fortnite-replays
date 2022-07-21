@@ -108,7 +108,7 @@ namespace FortniteReplayExtractor
           foreach (Task<DataSet> replayDataset in replayCollectionTasks)
           {
             replayDataset.Wait();
-            replayCollection.Merge(replayDataset.Result,true);
+            replayCollection.Merge(replayDataset.Result);
           }
         }
 

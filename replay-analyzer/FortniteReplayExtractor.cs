@@ -131,7 +131,7 @@ namespace FortniteReplayExtractor
             exportFileName = $"{replaysDstFolder}/{chunkIndex}/{tblName}.csv";
           }
           
-          if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+          if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
           {
             exportFilePath = new string($"{replaysDstFolder}\\{chunkIndex}\\");
             exportFileName = $"{replaysDstFolder}\\{chunkIndex}\\{tblName}.csv";

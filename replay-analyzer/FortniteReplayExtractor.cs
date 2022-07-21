@@ -103,13 +103,7 @@ namespace FortniteReplayExtractor
         Console.WriteLine("Collecting Replay Datasets and merging...");
         foreach (Task<FortniteReplayReader.Models.FortniteReplay> replay in readReplayTasks)
         {
-          replayCollectionTasks.Add(Task.Run(function: () => GetFortniteReplayDataSet(replay.Result)));
-
-          foreach (Task<DataSet> replayDataset in replayCollectionTasks)
-          {
-            replayDataset.Wait();
-            replayCollection.Merge(replayDataset.Result);
-          }
+          replayCollection.Merge(GetFortniteReplayDataSet(replay.Result));
         }
 
       

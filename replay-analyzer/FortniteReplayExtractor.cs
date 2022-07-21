@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Runtime.InteropServices;
 using System.Diagnostics;
 using Unreal.Core.Models.Enums;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace FortniteReplayExtractor
   class FortniteReplayExtractor
   {
     static public string replaysPath;
+    static public string exportFilePath;
+    static public string exportFileName;
     static public string replaysDstFolder;
     static public FortniteReplayReader.Models.FortniteReplay GetReplay(string replayPath) {
       var serviceCollection = new ServiceCollection()
@@ -44,9 +47,10 @@ namespace FortniteReplayExtractor
       replayDataset.Tables["sessionPlayerMovement"].Merge(SessionParser.ParsePlayerMovements(replay, nanoGameSessionId, replayDataset.Tables["players"]));
       return replayDataset;
     }
-
+    
     static void Main(string[] args)
     {
+
       int coreCount = Environment.ProcessorCount;
 
       Stopwatch sw = new Stopwatch();
@@ -112,21 +116,39 @@ namespace FortniteReplayExtractor
       foreach (DataTable tbl in replayCollection.Tables)
         {
           string tblName = new string(tbl.TableName);
-          string filePath = $".\\{replaysDstFolder}\\{chunkIndex}\\";
-          string fileName = $".\\{replaysDstFolder}\\{chunkIndex}\\{tblName}.csv";
-          bool pathExists = System.IO.Directory.Exists(filePath);
-          if (pathExists == false) { System.IO.Directory.CreateDirectory(filePath); }
-          Console.WriteLine($"Writing {fileName} CSV...");
-          tbl.ToCSV(fileName);
-          FileInfo fileToCompress = new FileInfo(fileName);
+          //string filePath = $".\\{replaysDstFolder}\\{chunkIndex}\\";
+          //string fileName = $".\\{replaysDstFolder}\\{chunkIndex}\\{tblName}.csv";
+          
+          if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+          {
+            
+            exportFilePath = new string($"{replaysDstFolder}/{chunkIndex}/");
+            exportFileName = $"{replaysDstFolder}/{chunkIndex}/{tblName}.csv";
+          }
+          if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+          {
+            exportFilePath = new string($"{replaysDstFolder}/{chunkIndex}/");
+            exportFileName = $"{replaysDstFolder}/{chunkIndex}/{tblName}.csv";
+          }
+          
+          if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+          {
+            exportFilePath = new string($"{replaysDstFolder}\\{chunkIndex}\\");
+            exportFileName = $"{replaysDstFolder}\\{chunkIndex}\\{tblName}.csv";
+          }
+          bool pathExists = System.IO.Directory.Exists(exportFilePath);
+          if (pathExists == false) { System.IO.Directory.CreateDirectory(exportFilePath); }
+          Console.WriteLine($"Writing {exportFileName} CSV...");
+          tbl.ToCSV(exportFileName);
+          FileInfo fileToCompress = new FileInfo(exportFileName);
 
           using (FileStream originalFileStream = fileToCompress.OpenRead())
           {
-            using (FileStream compressedFileStream = File.Create(fileName + ".gz"))
+            using (FileStream compressedFileStream = File.Create(exportFileName + ".gz"))
             {
               using (GZipStream compressionStream = new GZipStream(compressedFileStream, CompressionMode.Compress))
               {
-                Console.WriteLine($"Compressing {fileName}");
+                Console.WriteLine($"Compressing {exportFileName}");
                 originalFileStream.CopyTo(compressionStream);
               }
             }

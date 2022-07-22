@@ -103,7 +103,16 @@ namespace FortniteReplayExtractor
         Console.WriteLine("Collecting Replay Datasets and merging...");
         foreach (Task<FortniteReplayReader.Models.FortniteReplay> replay in readReplayTasks)
         {
-          replayCollection.Merge(GetFortniteReplayDataSet(replay.Result));
+          try
+          {
+            replayCollection.Merge(GetFortniteReplayDataSet(replay.Result));
+          }
+          catch (Exception)
+          {
+            Console.WriteLine($"Failed to parse {replay.Result.GameData.GameSessionId}");
+            throw;
+          }
+          
         }
 
       
